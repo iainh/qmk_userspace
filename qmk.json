@@ -4,6 +4,7 @@
         ["ai03/altair_x", "iainh"],
         ["boardsource/lulu/rp2040", "iainh"],
         ["keyboardio/atreus", "iainh"],
-        ["rgbkb/sol3/rev1", "iainh"]
+        ["rgbkb/sol3/rev1", "iainh"],
+        ["ergodox_ez", "iainh"]
     ]
 }
