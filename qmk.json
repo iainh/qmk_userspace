@@ -3,6 +3,7 @@
     "build_targets": [
         ["ai03/altair_x", "iainh"],
         ["boardsource/lulu/rp2040", "iainh"],
-        ["keyboardio/atreus", "iainh"]
+        ["keyboardio/atreus", "iainh"],
+        ["rgbkb/sol3/rev1", "iainh"]
     ]
 }
