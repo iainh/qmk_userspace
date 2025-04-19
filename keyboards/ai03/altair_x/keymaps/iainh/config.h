@@ -11,4 +11,9 @@
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 500U
 #define PICO_XOSC_STARTUP_DELAY_MULTIPLIER 64
 
+// Tap-hold configuration for home row mods.
+#define TAPPING_TERM 175
+#define PERMISSIVE_HOLD
+#define QUICK_TAP_TERM_PER_KEY
+
 #define CHORDAL_HOLD
