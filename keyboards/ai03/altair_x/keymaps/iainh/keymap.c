@@ -15,7 +15,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  [_COLEMAK] = LAYOUT_wrapper(
         KC_DELETE, ______________COLEMAK_MOD_DH_L1____________, KC_EQUAL, KC_MINUS, ______________COLEMAK_MOD_DH_R1____________, KC_BSLS,
   LGUI_T(KC_BSPC), ______________COLEMAK_MOD_DH_L2____________, KC_ESC,     KC_ESC, ______________COLEMAK_MOD_DH_R2____________, RGUI_T(KC_QUOTE),
-          KC_LSFT, ______________COLEMAK_MOD_DH_L3____________, KC_TRNS,   KC_TRNS, ______________COLEMAK_MOD_DH_R3____________, KC_RSFT,
+          KC_LSFT, ______________COLEMAK_MOD_DH_L3____________, KC_MEH,     KC_MEH, ______________COLEMAK_MOD_DH_R3____________, KC_RSFT,
                             KC_LEFT, KC_RIGHT, KC_SPC, KC_BSPC,                 KC_TAB, KC_ENTER, KC_UP, KC_DOWN
  ),
 
@@ -48,17 +48,25 @@ bool get_chordal_hold(uint16_t tap_hold_keycode, keyrecord_t* tap_hold_record,
                       uint16_t other_keycode, keyrecord_t* other_record) {
     // Exceptionally allow some one-handed chords for hotkeys.
     switch (tap_hold_keycode) {
+        // Left hand CTRL-C, CTRL-D, CTRL-S, CTRL-V
         case LCTL_T(KC_Z):
             if (other_keycode == KC_C || other_keycode == KC_D || other_keycode == KC_S || other_keycode == KC_V) {
                 return true;
             }
             break;
 
+        // Right hand CTRL-L
         case RCTL_T(KC_SLSH):
             if (other_keycode == KC_L) {
                 return true;
             }
             break;
+
+        // Right hand ALT-TAB
+        case RALT_T(KC_DOT):
+                if (other_keycode == KC_TAB) {
+                    return true;
+                }
     }
 
     // Otherwise defer to the opposite hands rule.
