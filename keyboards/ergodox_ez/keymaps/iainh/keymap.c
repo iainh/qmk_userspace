@@ -43,10 +43,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 [MDIA]  = LAYOUT_ergodox_pretty_wrapper(
     _______, ___________________BLANK___________________, _______, _______, ___________________BLANK___________________, CK_RST,
-    _______, _______, _______, KC_MS_UP, _______, _______, _______,  _______, _______, _______, _______, _______, _______, _______,
-    _______, _______, KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT,       _______, ___________________BLANK___________________, KC_MEDIA_PLAY_PAUSE,
+    _______, _______, _______, MS_UP,   _______, _______, _______,  _______, _______, _______, _______, _______, _______, _______,
+    _______, _______, MS_LEFT,    MS_DOWN,    MS_RGHT,           _______, ___________________BLANK___________________, KC_MEDIA_PLAY_PAUSE,
     _______, ___________________BLANK___________________, _______,         _______, _______, _______, KC_MEDIA_PREV_TRACK,KC_MEDIA_NEXT_TRACK,_______, _______,
-    _______, WEBUSB_PAIR,    _______, KC_MS_BTN1,     KC_MS_BTN2,          KC_AUDIO_VOL_UP,KC_AUDIO_VOL_DOWN,KC_AUDIO_MUTE,  _______, _______,
+    _______, WEBUSB_PAIR,    _______, MS_BTN1,        MS_BTN2,             KC_AUDIO_VOL_UP,KC_AUDIO_VOL_DOWN,KC_AUDIO_MUTE,  _______, _______,
                                                                                                     _______, _______, _______, _______,
                                                                                                                     _______, _______,
                                                                                     _______, _______, _______, _______, _______, KC_WWW_BACK
