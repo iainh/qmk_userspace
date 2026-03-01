@@ -38,8 +38,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    _______, ________________SYMBOLS_L2_________________,                     ________________SYMBOLS_R2_________________, _______,
    _______, ________________SYMBOLS_L3_________________, _______, _______, ________________SYMBOLS_R3_________________, _______,
    _______, KC_EQUAL,    _______, _______, _______,         _______, KC_DOT,     KC_0,           KC_EQUAL,       _______,
-                RGB_MOD,        HSV_172_255_255,RGB_TOG,        RGB_SLD,                                        HSV_86_255_128, _______,
-                                                                                    RGB_VAD,        RGB_VAI,        HSV_27_255_255, _______, RGB_HUD,        RGB_HUI
+                RM_NEXT,        HSV_172_255_255,RM_TOGG,        RGB_SLD,                                        HSV_86_255_128, _______,
+                                                                                    RM_VALD,        RM_VALU,        HSV_27_255_255, _______, RM_HUED,        RM_HUEU
   ),
 [MDIA]  = LAYOUT_ergodox_pretty_wrapper(
     _______, ___________________BLANK___________________, _______, _______, ___________________BLANK___________________, CK_RST,
