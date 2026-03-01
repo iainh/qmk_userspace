@@ -30,7 +30,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           LT(1,KC_GRAVE), KC_LALT, KC_LGUI, KC_LEFT, KC_RIGHT,                KC_UP, KC_DOWN, KC_RALT, KC_RALT, MO(1),
                                              LALT_T(KC_APPLICATION),KC_LGUI,        KC_LALT,        LCTL_T(KC_ESCAPE),
                                                                     KC_HOME,        KC_PGUP,
-                                      KC_SPACE,       KC_BSPC,      KC_END,         KC_PGDN,      KC_TAB,         KC_ENTER
+                                      NAV_SPC,        KC_BSPC,      KC_END,         KC_PGDN,      KC_TAB,         KC_ENTER
   ),
 [SYMB] = LAYOUT_ergodox_pretty_wrapper(
   KC_ESCAPE, _______________FUNCTIONS_L0________________, _______, _______, _______________FUNCTIONS_R0________________, KC_F11,

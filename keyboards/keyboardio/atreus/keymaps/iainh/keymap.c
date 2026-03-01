@@ -43,7 +43,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ______________COLEMAK_MOD_DH_L1____________,                              ______________COLEMAK_MOD_DH_R1____________,
     ______________COLEMAK_MOD_DH_L2____________,                              ______________COLEMAK_MOD_DH_R2____________,
     ______________COLEMAK_MOD_DH_L3____________, KC_ESC,              KC_ESC, ______________COLEMAK_MOD_DH_R3____________,
-    MO(_SYMB), LGUI_T(KC_EQUAL), KC_DELETE, KC_APP, KC_SPC, KC_BSPC, KC_TAB, KC_ENT, KC_MINUS, KC_BSLS, RGUI_T(KC_QUOTE), MO(_SYMB)
+    MO(_SYMB), LGUI_T(KC_EQUAL), KC_DELETE, KC_APP, NAV_SPC, KC_BSPC, KC_TAB, KC_ENT, KC_MINUS, KC_BSLS, RGUI_T(KC_QUOTE), MO(_SYMB)
   ),
 
   [_SYMB] = LAYOUT_wrapper(

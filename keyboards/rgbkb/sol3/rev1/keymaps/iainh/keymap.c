@@ -53,7 +53,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      KC_DELETE, ______________COLEMAK_MOD_DH_L1____________, KC_LALT, KC_RALT, ______________COLEMAK_MOD_DH_R1____________, KC_BSLS,
        KC_BSPC, ______________COLEMAK_MOD_DH_L2____________, TG(1),     TG(1), ______________COLEMAK_MOD_DH_R2____________, LGUI_T(KC_QUOTE),
        KC_LSFT, ______________COLEMAK_MOD_DH_L3____________, KC_HYPR,  KC_MEH, ______________COLEMAK_MOD_DH_R3____________, KC_RSFT,
-       _______, MO(1), RM_TOGG, KC_LEFT, KC_RIGHT, KC_SPC,   KC_HOME, KC_BSPC, KC_TAB, LCTL_T(KC_ESCAPE), KC_ENTER, KC_UP, KC_DOWN, KC_RALT, MO(1), _______,
+       _______, MO(1), RM_TOGG, KC_LEFT, KC_RIGHT, NAV_SPC,  KC_HOME, KC_BSPC, KC_TAB, LCTL_T(KC_ESCAPE), KC_ENTER, KC_UP, KC_DOWN, KC_RALT, MO(1), _______,
         KC_VOLD, KC_VOLU, KC_MNXT, KC_MPLY, KC_MPRV,                                                       KC_VOLD, KC_VOLU, KC_MNXT, KC_MPLY, KC_MPRV
   ),
 
