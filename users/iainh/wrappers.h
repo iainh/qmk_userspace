@@ -18,7 +18,6 @@ expanded before being used as arguments to the LAYOUT_xxx macro.
 #define LAYOUT_wrapper(...)                  LAYOUT(__VA_ARGS__)
 #define LAYOUT_split_3x6_3_wrapper(...)      LAYOUT_split_3x6_3(__VA_ARGS__)
 
-#define LSFT_A LSFT_T(KC_A)
 #define LCTL_Z LCTL_T(KC_Z)
 #define LALT_X LALT_T(KC_X)
 

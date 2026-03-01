@@ -2,21 +2,8 @@
 #include "version.h"
 #include "iainh.h"
 
-#define KC_MAC_UNDO LGUI(KC_Z)
-#define KC_MAC_CUT LGUI(KC_X)
 #define KC_MAC_COPY LGUI(KC_C)
 #define KC_MAC_PASTE LGUI(KC_V)
-#define KC_PC_UNDO LCTL(KC_Z)
-#define KC_PC_CUT LCTL(KC_X)
-#define KC_PC_COPY LCTL(KC_C)
-#define KC_PC_PASTE LCTL(KC_V)
-#define ES_LESS_MAC KC_GRAVE
-#define ES_GRTR_MAC LSFT(KC_GRAVE)
-#define ES_BSLS_MAC ALGR(KC_6)
-#define NO_PIPE_ALT KC_GRAVE
-#define NO_BSLS_ALT KC_EQUAL
-#define LSA_T(kc) MT(MOD_LSFT | MOD_LALT, kc)
-#define BP_NDSH_MAC ALGR(KC_8)
 
 enum layers {
     BASE,  // default layer
@@ -25,11 +12,11 @@ enum layers {
 };
 
 enum custom_keycodes {
-  RGB_SLD = SAFE_RANGE,
+  VRSN = SAFE_RANGE,
+  RGB_SLD,
   HSV_172_255_255,
   HSV_86_255_128,
   HSV_27_255_255,
-  VRSN = SAFE_RANGE,
 };
 
 // clang-format off
@@ -46,23 +33,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                       KC_SPACE,       KC_BSPC,      KC_END,         KC_PGDN,      KC_TAB,         KC_ENTER
   ),
 [SYMB] = LAYOUT_ergodox_pretty_wrapper(
-  KC_ESCAPE, _______________FUNCTIONS_L0________________, KC_TRNS, KC_TRNS, _______________FUNCTIONS_R0________________, KC_F11,
-   KC_TRNS, ________________SYMBOLS_L1_________________, KC_TRNS, KC_TRNS, ________________SYMBOLS_R1_________________, KC_F12,
-   KC_TRNS, ________________SYMBOLS_L2_________________,                     ________________SYMBOLS_R2_________________, KC_TRNS,
-   KC_TRNS, ________________SYMBOLS_L3_________________, KC_TRNS, KC_TRNS, ________________SYMBOLS_R3_________________, KC_TRNS,
-   KC_TRNS, KC_EQUAL,    KC_TRNS, KC_TRNS, KC_TRNS,         KC_TRNS, KC_DOT,     KC_0,           KC_EQUAL,       KC_TRNS,
-                RGB_MOD,        HSV_172_255_255,RGB_TOG,        RGB_SLD,                                        HSV_86_255_128, KC_TRNS,
-                                                                                    RGB_VAD,        RGB_VAI,        HSV_27_255_255, KC_TRNS, RGB_HUD,        RGB_HUI
+  KC_ESCAPE, _______________FUNCTIONS_L0________________, _______, _______, _______________FUNCTIONS_R0________________, KC_F11,
+   _______, ________________SYMBOLS_L1_________________, _______, _______, ________________SYMBOLS_R1_________________, KC_F12,
+   _______, ________________SYMBOLS_L2_________________,                     ________________SYMBOLS_R2_________________, _______,
+   _______, ________________SYMBOLS_L3_________________, _______, _______, ________________SYMBOLS_R3_________________, _______,
+   _______, KC_EQUAL,    _______, _______, _______,         _______, KC_DOT,     KC_0,           KC_EQUAL,       _______,
+                RGB_MOD,        HSV_172_255_255,RGB_TOG,        RGB_SLD,                                        HSV_86_255_128, _______,
+                                                                                    RGB_VAD,        RGB_VAI,        HSV_27_255_255, _______, RGB_HUD,        RGB_HUI
   ),
 [MDIA]  = LAYOUT_ergodox_pretty_wrapper(
-    KC_TRNS, ___________________BLANK___________________, KC_TRNS, KC_TRNS, ___________________BLANK___________________, CK_RST,
-    KC_TRNS, KC_TRNS, KC_TRNS, KC_MS_UP, KC_TRNS, KC_TRNS, KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-    KC_TRNS, KC_TRNS, KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT,       KC_TRNS, ___________________BLANK___________________, KC_MEDIA_PLAY_PAUSE,
-    KC_TRNS, ___________________BLANK___________________, KC_TRNS,         KC_TRNS, KC_TRNS, KC_TRNS, KC_MEDIA_PREV_TRACK,KC_MEDIA_NEXT_TRACK,KC_TRNS, KC_TRNS,
-    KC_TRNS, WEBUSB_PAIR,    KC_TRNS, KC_MS_BTN1,     KC_MS_BTN2,          KC_AUDIO_VOL_UP,KC_AUDIO_VOL_DOWN,KC_AUDIO_MUTE,  KC_TRNS, KC_TRNS,
-                                                                                                    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-                                                                                                                    KC_TRNS, KC_TRNS,
-                                                                                    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_WWW_BACK
+    _______, ___________________BLANK___________________, _______, _______, ___________________BLANK___________________, CK_RST,
+    _______, _______, _______, KC_MS_UP, _______, _______, _______,  _______, _______, _______, _______, _______, _______, _______,
+    _______, _______, KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT,       _______, ___________________BLANK___________________, KC_MEDIA_PLAY_PAUSE,
+    _______, ___________________BLANK___________________, _______,         _______, _______, _______, KC_MEDIA_PREV_TRACK,KC_MEDIA_NEXT_TRACK,_______, _______,
+    _______, WEBUSB_PAIR,    _______, KC_MS_BTN1,     KC_MS_BTN2,          KC_AUDIO_VOL_UP,KC_AUDIO_VOL_DOWN,KC_AUDIO_MUTE,  _______, _______,
+                                                                                                    _______, _______, _______, _______,
+                                                                                                                    _______, _______,
+                                                                                    _______, _______, _______, _______, _______, KC_WWW_BACK
   ),
 };
 // clang-format on

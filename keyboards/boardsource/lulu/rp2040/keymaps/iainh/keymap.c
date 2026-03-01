@@ -54,9 +54,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
    KC_ESCAPE, _______________FUNCTIONS_L0________________,                   _______________FUNCTIONS_R0________________, KC_F11,
      RGB_TOG, ________________SYMBOLS_L1_________________,                   ________________SYMBOLS_R1_________________, KC_F12,
-     KC_TRNS, ________________SYMBOLS_L2_________________,                   ________________SYMBOLS_R2_________________, KC_TRNS,
-     KC_TRNS, ________________SYMBOLS_L3_________________, KC_TRNS, KC_TRNS, ________________SYMBOLS_R3_________________, KC_TRNS,
-                             KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_DOT,     KC_0
+     _______, ________________SYMBOLS_L2_________________,                   ________________SYMBOLS_R2_________________, _______,
+     _______, ________________SYMBOLS_L3_________________, _______, _______, ________________SYMBOLS_R3_________________, _______,
+                             _______, _______, _______, _______, _______, _______, KC_DOT,     KC_0
   ),
 
 
@@ -77,11 +77,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
  [_NAV] = LAYOUT_wrapper(
 
-   KC_TRNS, ___________________BLANK___________________,                   ___________________BLANK___________________, KC_TRNS,
-   KC_TRNS, _______________NAVIGATION_L1_______________,                   _______________NAVIGATION_R1_______________, KC_TRNS,
-   KC_TRNS, _______________NAVIGATION_L2_______________,                   _______________NAVIGATION_R2_______________, KC_TRNS,
-   KC_TRNS, _______________NAVIGATION_L3_______________, KC_TRNS, KC_TRNS, _______________NAVIGATION_R3_______________, KC_TRNS,
-                            KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
+   _______, ___________________BLANK___________________,                   ___________________BLANK___________________, _______,
+   _______, _______________NAVIGATION_L1_______________,                   _______________NAVIGATION_R1_______________, _______,
+   _______, _______________NAVIGATION_L2_______________,                   _______________NAVIGATION_R2_______________, _______,
+   _______, _______________NAVIGATION_L3_______________, _______, _______, _______________NAVIGATION_R3_______________, _______,
+                            _______, _______, _______, _______, _______, _______, _______, _______
   )
 };
 
@@ -94,23 +94,4 @@ char chordal_hold_handedness(keypos_t key) {
     return key.row < MATRIX_ROWS / 2 ? 'L' : 'R';
 }
 
-bool get_chordal_hold(uint16_t tap_hold_keycode, keyrecord_t* tap_hold_record,
-                      uint16_t other_keycode, keyrecord_t* other_record) {
-    // Exceptionally allow some one-handed chords for hotkeys.
-    switch (tap_hold_keycode) {
-        case LCTL_T(KC_Z):
-            if (other_keycode == KC_C || other_keycode == KC_D || other_keycode == KC_S || other_keycode == KC_V) {
-                return true;
-            }
-            break;
 
-        case RCTL_T(KC_SLSH):
-            if (other_keycode == KC_L) {
-                return true;
-            }
-            break;
-    }
-
-    // Otherwise defer to the opposite hands rule.
-    return get_chordal_hold_default(tap_hold_record, other_record);
-}

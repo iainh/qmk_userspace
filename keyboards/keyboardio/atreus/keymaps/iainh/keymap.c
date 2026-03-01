@@ -73,24 +73,3 @@ char chordal_hold_handedness(keypos_t key) {
     // left, and the other half are on the right.
     return key.row < MATRIX_ROWS / 2 ? 'L' : 'R';
 }
-
-bool get_chordal_hold(uint16_t tap_hold_keycode, keyrecord_t* tap_hold_record,
-                      uint16_t other_keycode, keyrecord_t* other_record) {
-    // Exceptionally allow some one-handed chords for hotkeys.
-    switch (tap_hold_keycode) {
-        case LCTL_T(KC_Z):
-            if (other_keycode == KC_C || other_keycode == KC_D || other_keycode == KC_S || other_keycode == KC_V) {
-                return true;
-            }
-            break;
-
-        case RCTL_T(KC_SLSH):
-            if (other_keycode == KC_L) {
-                return true;
-            }
-            break;
-    }
-
-    // Otherwise defer to the opposite hands rule.
-    return get_chordal_hold_default(tap_hold_record, other_record);
-}
