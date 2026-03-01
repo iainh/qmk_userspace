@@ -6,7 +6,7 @@ bool get_chordal_hold(uint16_t tap_hold_keycode, keyrecord_t* tap_hold_record,
     switch (tap_hold_keycode) {
         // Left hand CTRL-C, CTRL-D, CTRL-S, CTRL-V
         case LCTL_T(KC_Z):
-            if (other_keycode == KC_C || other_keycode == KC_D || other_keycode == KC_S || other_keycode == KC_V) {
+            if (other_keycode == KC_C || other_keycode == KC_D || other_keycode == LCTL_T(KC_S) || other_keycode == KC_V) {
                 return true;
             }
             break;

@@ -25,11 +25,11 @@ expanded before being used as arguments to the LAYOUT_xxx macro.
 #define RALT_DOT RALT_T(KC_DOT)
 
 #define ______________COLEMAK_MOD_DH_L1____________       KC_Q,   KC_W,   KC_F, KC_P,       KC_B
-#define ______________COLEMAK_MOD_DH_L2____________       KC_A,   KC_R,   KC_S, LT(2,KC_T), LT(1,KC_G)
+#define ______________COLEMAK_MOD_DH_L2____________       LGUI_T(KC_A), LALT_T(KC_R), LCTL_T(KC_S), LT(2,KC_T), LT(1,KC_G)
 #define ______________COLEMAK_MOD_DH_L3____________       LCTL_Z, LALT_X, KC_C, KC_D,       KC_V
 
 #define ______________COLEMAK_MOD_DH_R1____________       KC_J,       KC_L, KC_U,    KC_Y,     KC_SCLN
-#define ______________COLEMAK_MOD_DH_R2____________       LT(1,KC_M), KC_N, KC_E,    KC_I,     KC_O
+#define ______________COLEMAK_MOD_DH_R2____________       LT(1,KC_M), RSFT_T(KC_N), RCTL_T(KC_E), RALT_T(KC_I), RGUI_T(KC_O)
 #define ______________COLEMAK_MOD_DH_R3____________       KC_K,       KC_H, KC_COMM, RALT_DOT, RCTL_SLASH
 
 #define ________________NUMBERS_L0_________________       KC_1, KC_2, KC_3, KC_4, KC_5
