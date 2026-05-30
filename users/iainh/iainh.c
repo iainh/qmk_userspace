@@ -1,5 +1,7 @@
 #include "iainh.h"
 
+#define TMUX_PREFIX SS_DOWN(X_LCTL) "b" SS_UP(X_LCTL)
+
 __attribute__((weak)) bool process_record_keymap(uint16_t keycode, keyrecord_t *record) {
     return true;
 }
@@ -19,6 +21,66 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                         tap_code16(LGUI(LSFT(KC_S)));
                         break;
                 }
+            }
+            return false;
+        case TMUX_LEFT:
+            if (record->event.pressed) {
+                SEND_STRING(TMUX_PREFIX SS_TAP(X_LEFT));
+            }
+            return false;
+        case TMUX_DOWN:
+            if (record->event.pressed) {
+                SEND_STRING(TMUX_PREFIX SS_TAP(X_DOWN));
+            }
+            return false;
+        case TMUX_UP:
+            if (record->event.pressed) {
+                SEND_STRING(TMUX_PREFIX SS_TAP(X_UP));
+            }
+            return false;
+        case TMUX_RIGHT:
+            if (record->event.pressed) {
+                SEND_STRING(TMUX_PREFIX SS_TAP(X_RIGHT));
+            }
+            return false;
+        case TMUX_COPY:
+            if (record->event.pressed) {
+                SEND_STRING(TMUX_PREFIX "[");
+            }
+            return false;
+        case TMUX_CMD:
+            if (record->event.pressed) {
+                SEND_STRING(TMUX_PREFIX ":");
+            }
+            return false;
+        case TMUX_DETACH:
+            if (record->event.pressed) {
+                SEND_STRING(TMUX_PREFIX "d");
+            }
+            return false;
+        case TMUX_KILL:
+            if (record->event.pressed) {
+                SEND_STRING(TMUX_PREFIX "x");
+            }
+            return false;
+        case TMUX_ZOOM:
+            if (record->event.pressed) {
+                SEND_STRING(TMUX_PREFIX "z");
+            }
+            return false;
+        case TMUX_SPLIT_H:
+            if (record->event.pressed) {
+                SEND_STRING(TMUX_PREFIX "%");
+            }
+            return false;
+        case TMUX_SPLIT_V:
+            if (record->event.pressed) {
+                SEND_STRING(TMUX_PREFIX "\"");
+            }
+            return false;
+        case TMUX_LAST_PANE:
+            if (record->event.pressed) {
+                SEND_STRING(TMUX_PREFIX ";");
             }
             return false;
     }

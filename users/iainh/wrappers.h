@@ -26,7 +26,7 @@ expanded before being used as arguments to the LAYOUT_xxx macro.
 
 #define NAV_SPC LT(2, KC_SPC)
 
-#define ______________COLEMAK_MOD_DH_L1____________       KC_Q,   KC_W,   KC_F, KC_P,       KC_B
+#define ______________COLEMAK_MOD_DH_L1____________       KC_Q,   KC_W,   KC_F, KC_P,       LT(3, KC_B)
 #define ______________COLEMAK_MOD_DH_L2____________       KC_A, LALT_T(KC_R), LCTL_T(KC_S), LSFT_T(KC_T), LT(1,KC_G)
 #define ______________COLEMAK_MOD_DH_L3____________       LCTL_Z, LALT_X, KC_C, KC_D,       KC_V
 
@@ -56,6 +56,15 @@ expanded before being used as arguments to the LAYOUT_xxx macro.
                                                           // ADM-3A style arrows
 #define _______________NAVIGATION_R2_______________       KC_LEFT, KC_DOWN,  KC_UP, KC_RIGHT, _______
 #define _______________NAVIGATION_R3_______________       _______, _______, _______, _______, _______
+
+#define __________________TMUX_L1__________________       _______, _______, _______, _______, _______
+#define __________________TMUX_L2__________________       _______, _______, _______, _______, _______
+#define __________________TMUX_L3__________________       _______, _______, _______, _______, _______
+
+#define __________________TMUX_R1__________________       _______, TMUX_COPY, TMUX_CMD, TMUX_DETACH, TMUX_KILL
+                                                          // Match NAVIGATION_R2 motion order.
+#define __________________TMUX_R2__________________       TMUX_LEFT, TMUX_DOWN, TMUX_UP, TMUX_RIGHT, TMUX_ZOOM
+#define __________________TMUX_R3__________________       TMUX_SPLIT_H, TMUX_SPLIT_V, TMUX_LAST_PANE, _______, _______
 
 #define ___________________BLANK___________________       _______, _______, _______, _______, _______
 
