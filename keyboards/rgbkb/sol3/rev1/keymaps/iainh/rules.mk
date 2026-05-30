@@ -1,1 +1,2 @@
 RGBLIGHT_DEFAULT_ON	= false
+LTO_ENABLE = no
