@@ -1,5 +1,19 @@
 #include "iainh.h"
 
+bool is_flow_tap_key(uint16_t keycode) {
+    // Do not include Space: after a word break, home-row Shift should still
+    // have a chance to resolve as a hold for sentence capitalization.
+    switch (get_tap_keycode(keycode)) {
+        case KC_A ... KC_Z:
+        case KC_DOT:
+        case KC_COMM:
+        case KC_SCLN:
+        case KC_SLSH:
+            return true;
+    }
+    return false;
+}
+
 bool get_chordal_hold(uint16_t tap_hold_keycode, keyrecord_t* tap_hold_record,
                       uint16_t other_keycode, keyrecord_t* other_record) {
     // Exceptionally allow some one-handed chords for hotkeys.
