@@ -12,7 +12,7 @@ enum layers {
 };
 
 enum custom_keycodes {
-  VRSN = SAFE_RANGE,
+  VRSN = IAINH_SAFE_RANGE,
   RGB_SLD,
   HSV_172_255_255,
   HSV_86_255_128,
@@ -63,7 +63,7 @@ char chordal_hold_handedness(keypos_t key) {
     return key.row < MATRIX_ROWS / 2 ? 'L' : 'R';
 }
 
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+bool process_record_keymap(uint16_t keycode, keyrecord_t *record) {
     if (record->event.pressed) {
         switch (keycode) {
             case VRSN:

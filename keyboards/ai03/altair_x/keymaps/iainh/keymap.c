@@ -13,7 +13,7 @@ enum layers {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
  [_COLEMAK] = LAYOUT_wrapper(
-        KC_DELETE, ______________COLEMAK_MOD_DH_L1____________, KC_EQUAL, KC_MINUS, ______________COLEMAK_MOD_DH_R1____________, KC_BSLS,
+        KC_DELETE, ______________COLEMAK_MOD_DH_L1____________, SCRNSHT, KC_MINUS, ______________COLEMAK_MOD_DH_R1____________, KC_BSLS,
   LGUI_T(KC_BSPC), ______________COLEMAK_MOD_DH_L2____________, KC_ESC,     KC_ESC, ______________COLEMAK_MOD_DH_R2____________, RGUI_T(KC_QUOTE),
           KC_LSFT, ______________COLEMAK_MOD_DH_L3____________, KC_MEH,     KC_MEH, ______________COLEMAK_MOD_DH_R3____________, KC_RSFT,
                             KC_LEFT, KC_RIGHT, NAV_SPC, KC_BSPC,                 KC_TAB, KC_ENTER, KC_UP, KC_DOWN

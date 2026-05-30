@@ -33,7 +33,7 @@ enum sol_layers {
 
 enum sol_keycodes {
     // Disables touch processing
-    TCH_TOG = SAFE_RANGE,
+    TCH_TOG = IAINH_SAFE_RANGE,
     MENU_BTN,
     MENU_UP,
     MENU_DN,
@@ -114,5 +114,4 @@ char chordal_hold_handedness(keypos_t key) {
     // left, and the other half are on the right.
     return key.row < MATRIX_ROWS / 2 ? 'L' : 'R';
 }
-
 

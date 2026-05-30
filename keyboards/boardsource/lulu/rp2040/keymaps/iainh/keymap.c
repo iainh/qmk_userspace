@@ -31,7 +31,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
          KC_EQUAL, ________________NUMBERS_L0_________________,                 ________________NUMBERS_R0_________________, KC_MINUS,
         KC_DELETE, ______________COLEMAK_MOD_DH_L1____________,                 ______________COLEMAK_MOD_DH_R1____________, KC_BSLS,
   LGUI_T(KC_BSPC), ______________COLEMAK_MOD_DH_L2____________,                 ______________COLEMAK_MOD_DH_R2____________, RGUI_T(KC_QUOTE),
-          KC_LSFT, ______________COLEMAK_MOD_DH_L3____________, KC_ESC, KC_ESC, ______________COLEMAK_MOD_DH_R3____________, KC_RSFT,
+          KC_LSFT, ______________COLEMAK_MOD_DH_L3____________, SCRNSHT, KC_ESC, ______________COLEMAK_MOD_DH_R3____________, KC_RSFT,
                             KC_LEFT, KC_RIGHT, NAV_SPC, KC_BSPC,                 KC_TAB, KC_ENTER, KC_UP, KC_DOWN
 ),
 

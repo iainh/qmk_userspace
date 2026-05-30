@@ -1,5 +1,31 @@
 #include "iainh.h"
 
+__attribute__((weak)) bool process_record_keymap(uint16_t keycode, keyrecord_t *record) {
+    return true;
+}
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case SCRNSHT:
+            if (record->event.pressed) {
+                switch (detected_host_os()) {
+                    case OS_MACOS:
+                    case OS_IOS:
+                        tap_code16(LGUI(LSFT(KC_4)));
+                        break;
+                    case OS_WINDOWS:
+                    case OS_UNSURE:
+                    default:
+                        tap_code16(LGUI(LSFT(KC_S)));
+                        break;
+                }
+            }
+            return false;
+    }
+
+    return process_record_keymap(keycode, record);
+}
+
 bool is_flow_tap_key(uint16_t keycode) {
     // Do not include Space: after a word break, home-row Shift should still
     // have a chance to resolve as a hold for sentence capitalization.
