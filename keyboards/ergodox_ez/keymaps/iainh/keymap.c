@@ -25,9 +25,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [BASE]  = LAYOUT_ergodox_pretty_wrapper(
    KC_EQUAL, ________________NUMBERS_L0_________________, KC_MAC_COPY, KC_MAC_PASTE, ________________NUMBERS_R0_________________, KC_MINUS,
-  KC_DELETE, ______________COLEMAK_MOD_DH_L1____________, TG(1),              TG(1), ______________COLEMAK_MOD_DH_R1____________, KC_BSLS,
-    KC_BSPC, ______________COLEMAK_MOD_DH_L2____________,                            ______________COLEMAK_MOD_DH_R2____________, LGUI_T(KC_QUOTE),
-    KC_LSFT, ______________COLEMAK_MOD_DH_L3____________, KC_HYPR,           KC_MEH, ______________COLEMAK_MOD_DH_R3____________, KC_RSFT,
+  KC_DELETE, ______________COLEMAK_MOD_DH_L1____________, SCRNSHT,        KC_MINUS, ______________COLEMAK_MOD_DH_R1____________, KC_BSLS,
+LGUI_T(KC_BSPC), ______________COLEMAK_MOD_DH_L2____________,                            ______________COLEMAK_MOD_DH_R2____________, RGUI_T(KC_QUOTE),
+    KC_LSFT, ______________COLEMAK_MOD_DH_L3____________, KC_MEH,           KC_MEH, ______________COLEMAK_MOD_DH_R3____________, KC_RSFT,
           LT(1,KC_GRAVE), KC_LALT, KC_LGUI, KC_LEFT, KC_RIGHT,                KC_UP, KC_DOWN, KC_RALT, KC_RALT, MO(1),
                                              LALT_T(KC_APPLICATION),KC_LGUI,        KC_LALT,        LCTL_T(KC_ESCAPE),
                                                                     KC_HOME,        KC_PGUP,
