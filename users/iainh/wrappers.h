@@ -18,21 +18,15 @@ expanded before being used as arguments to the LAYOUT_xxx macro.
 #define LAYOUT_wrapper(...)                  LAYOUT(__VA_ARGS__)
 #define LAYOUT_split_3x6_3_wrapper(...)      LAYOUT_split_3x6_3(__VA_ARGS__)
 
-#define LCTL_Z LCTL_T(KC_Z)
-#define LALT_X LALT_T(KC_X)
-
-#define RCTL_SLASH RCTL_T(KC_SLASH)
-#define RALT_DOT RALT_T(KC_DOT)
-
 #define NAV_SPC LT(2, KC_SPC)
 
 #define ______________COLEMAK_MOD_DH_L1____________       KC_Q,   KC_W,   KC_F, KC_P,       LT(3, KC_B)
 #define ______________COLEMAK_MOD_DH_L2____________       KC_A, LALT_T(KC_R), LCTL_T(KC_S), LSFT_T(KC_T), LT(1,KC_G)
-#define ______________COLEMAK_MOD_DH_L3____________       LCTL_Z, LALT_X, KC_C, KC_D,       KC_V
+#define ______________COLEMAK_MOD_DH_L3____________       KC_Z,   KC_X,   KC_C, KC_D,       KC_V
 
 #define ______________COLEMAK_MOD_DH_R1____________       KC_J,       KC_L, KC_U,    KC_Y,     KC_SCLN
 #define ______________COLEMAK_MOD_DH_R2____________       LT(1,KC_M), RSFT_T(KC_N), RCTL_T(KC_E), RALT_T(KC_I), KC_O
-#define ______________COLEMAK_MOD_DH_R3____________       KC_K,       KC_H, KC_COMM, RALT_DOT, RCTL_SLASH
+#define ______________COLEMAK_MOD_DH_R3____________       KC_K,       KC_H, KC_COMM, KC_DOT,  KC_SLASH
 
 #define ________________NUMBERS_L0_________________       KC_1, KC_2, KC_3, KC_4, KC_5
 #define ________________NUMBERS_R0_________________       KC_6, KC_7, KC_8, KC_9, KC_0
